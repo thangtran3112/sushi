@@ -1,0 +1,54 @@
+{
+  "name": "sushi-ichiban",
+  "private": true,
+  "description": "Sushi Ichiban",
+  "version": "0.1.0",
+  "author": "thangtran3112@gmail.com",
+  "dependencies": {
+    "@material-ui/core": "^4.12.4",
+    "@material-ui/icons": "^4.11.3",
+    "@material-ui/lab": "^4.0.0-alpha.61",
+    "clsx": "^1.1.1",
+    "framer-motion": "^2",
+    "gatsby": "4.24.4",
+    "gatsby-background-image": "^1.6.0",
+    "gatsby-image": "^3",
+    "gatsby-plugin-layout": "^1.3.10",
+    "gatsby-plugin-manifest": "^4",
+    "gatsby-plugin-material-ui": "^4",
+    "gatsby-plugin-offline": "^5",
+    "gatsby-plugin-react-helmet": "^5",
+    "gatsby-plugin-sharp": "^4",
+    "gatsby-plugin-web-font-loader": "^1.0.4",
+    "gatsby-source-filesystem": "^4",
+    "gatsby-transformer-sharp": "^4",
+    "prettier": "^2.0.5",
+    "prop-types": "^15.7.2",
+    "react": "^17",
+    "react-dom": "^17",
+    "react-helmet": "^6.1.0",
+    "react-intersection-observer": "^8.27.1"
+  },
+  "devDependencies": {},
+  "keywords": [
+    "gatsby"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build",
+    "dev": "gatsby develop",
+    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
+    "wipe": "node wipe.js && rm -rf node_modules && npm update --save-dev && npm update --save"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+  },
+  "bugs": {
+    "url": "https://github.com/gatsbyjs/gatsby/issues"
+  }
+}
