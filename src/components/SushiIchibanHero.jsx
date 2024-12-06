@@ -1,12 +1,18 @@
-import React from "react"
-import clsx from "clsx"
-import { navigate } from "gatsby"
-import { makeStyles, Typography, Grid, Button, Hidden } from "@material-ui/core"
-import Logo from "./LogoIcon"
-import NextButton from "./NextButton"
-import useBooleanState from "../hooks/useBooleanState"
-import ReservationsDialog from "./ReservationsDialog"
-import Centered from "./Layouts/Centered"
+import React from "react";
+import clsx from "clsx";
+import { navigate } from "gatsby";
+import {
+  makeStyles,
+  Typography,
+  Grid,
+  Button,
+  Hidden,
+} from "@material-ui/core";
+import Logo from "./LogoIcon";
+import NextButton from "./NextButton";
+import useBooleanState from "../hooks/useBooleanState";
+import ReservationsDialog from "./ReservationsDialog";
+import Centered from "./Layouts/Centered";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -44,19 +50,19 @@ const useStyles = makeStyles((theme) => ({
   reservationsButton: {
     borderRadius: 0,
   },
-}))
+}));
 
 const SushiIchibanHero = () => {
-  const classes = useStyles()
+  const classes = useStyles();
 
-  const [open, { setTrue, setFalse }] = useBooleanState()
+  const [open, { setTrue, setFalse }] = useBooleanState();
 
   const title = (
     <>
       <Logo marginRight={16} width={48} height={48} verticalAlign="top" />
       Sushi Ichiban
     </>
-  )
+  );
 
   return (
     <>
@@ -110,19 +116,11 @@ const SushiIchibanHero = () => {
               </NextButton>
             </Grid>
           </Grid>
-          <Typography
-            className={classes.spacing}
-            component="div"
-            variant="subtitle2"
-            align="center"
-          >
-            Due to Covid-19, reservations for Dine-in services are recommended.
-          </Typography>
         </div>
       </div>
       <ReservationsDialog open={open} onClose={setFalse} />
     </>
-  )
-}
+  );
+};
 
-export default SushiIchibanHero
+export default SushiIchibanHero;

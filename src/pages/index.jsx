@@ -1,25 +1,25 @@
-import React from "react"
-import clsx from "clsx"
-import { graphql, navigate, useStaticQuery } from "gatsby"
-import Image from "gatsby-image"
-import BackgroundImage from "gatsby-background-image"
-import { Grid, makeStyles, Typography, Hidden, Link } from "@material-ui/core"
-import SMSIcon from "@material-ui/icons/Sms"
-import PhoneIcon from "@material-ui/icons/Phone"
-import EmailIcon from "@material-ui/icons/Email"
-import Page from "../components/Page"
-import HeroContainer from "../components/HeroContainer"
-import SushiIchibanHero from "../components/SushiIchibanHero"
-import NextButton from "../components/NextButton"
-import Centered from "../components/Layouts/Centered"
-import IconText from "../components/IconText"
-import Overlay from "../components/Overlay"
-import Split from "../components/Layouts/Split"
-import SushiCollage from "../components/SushiCollage"
-import WeeklySchedule from "../components/WeeklySchedule"
-import PhoneNumber from "../components/PhoneNumber"
-import ContactSection from "../components/ContactSection"
-import FadeInView from "../components/FadeInView"
+import React from "react";
+import clsx from "clsx";
+import { graphql, navigate, useStaticQuery } from "gatsby";
+import Image from "gatsby-image";
+import BackgroundImage from "gatsby-background-image";
+import { Grid, makeStyles, Typography, Hidden, Link } from "@material-ui/core";
+import SMSIcon from "@material-ui/icons/Sms";
+import PhoneIcon from "@material-ui/icons/Phone";
+import EmailIcon from "@material-ui/icons/Email";
+import Page from "../components/Page";
+import HeroContainer from "../components/HeroContainer";
+import SushiIchibanHero from "../components/SushiIchibanHero";
+import NextButton from "../components/NextButton";
+import Centered from "../components/Layouts/Centered";
+import IconText from "../components/IconText";
+import Overlay from "../components/Overlay";
+import Split from "../components/Layouts/Split";
+import SushiCollage from "../components/SushiCollage";
+import WeeklySchedule from "../components/WeeklySchedule";
+import PhoneNumber from "../components/PhoneNumber";
+import ContactSection from "../components/ContactSection";
+import FadeInView from "../components/FadeInView";
 
 const useStyles = makeStyles((theme) => ({
   transition: {
@@ -48,10 +48,10 @@ const useStyles = makeStyles((theme) => ({
     marginTop: theme.spacing(2),
     minWidth: "220px",
   },
-}))
+}));
 
 const IndexPage = ({ location }) => {
-  const classes = useStyles()
+  const classes = useStyles();
 
   const data = useStaticQuery(
     graphql`
@@ -114,7 +114,7 @@ const IndexPage = ({ location }) => {
         }
       }
     `
-  )
+  );
 
   const dineInSources = [
     data.mobileDineInHero.childImageSharp.fluid,
@@ -122,7 +122,7 @@ const IndexPage = ({ location }) => {
       ...data.desktopDineInHero.childImageSharp.fluid,
       media: "(min-width: 768px)",
     },
-  ]
+  ];
 
   const takeoutSources = [
     data.mobileTakeoutHero.childImageSharp.fluid,
@@ -130,7 +130,7 @@ const IndexPage = ({ location }) => {
       ...data.desktopTakeoutHero.childImageSharp.fluid,
       media: "(min-width: 768px)",
     },
-  ]
+  ];
 
   return (
     <Page title="Sushi Ichiban" location={location}>
@@ -274,9 +274,7 @@ const IndexPage = ({ location }) => {
                     Dine In
                   </Typography>
                   <Typography variant="h6" align="center" gutterBottom>
-                    <strong>Reservations in advance are recommended.</strong>{" "}
-                    The safety of our clients and our staff is of utmost
-                    importance.
+                    <strong>Reservations in advance are recommended.</strong>
                   </Typography>
                 </div>
               </Centered>
@@ -382,7 +380,7 @@ const IndexPage = ({ location }) => {
         </Centered>
       </div>
     </Page>
-  )
-}
+  );
+};
 
-export default IndexPage
+export default IndexPage;
