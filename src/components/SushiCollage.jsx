@@ -1,8 +1,8 @@
-import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import BackgroundImage from "gatsby-background-image"
-import { makeStyles, Grid, Hidden } from "@material-ui/core"
-import HeroContainer from "./HeroContainer"
+import React from "react";
+import { useStaticQuery, graphql } from "gatsby";
+import BackgroundImage from "gatsby-background-image";
+import { makeStyles, Grid, Hidden } from "@material-ui/core";
+import HeroContainer from "./HeroContainer";
 
 const useStyles = makeStyles((theme) => ({
   backgroundImage: {
@@ -11,59 +11,59 @@ const useStyles = makeStyles((theme) => ({
     backgroundRepeat: "none",
     backgroundSize: "cover",
   },
-}))
+}));
 
 export default function SushiCollage() {
-  const classes = useStyles()
+  const classes = useStyles();
 
   const data = useStaticQuery(
     graphql`
       query {
         desktop1: file(relativePath: { eq: "sushi1.jpg" }) {
           childImageSharp {
-            fluid(quality: 70, maxHeight: 300) {
+            fluid(quality: 100, maxHeight: 300) {
               ...GatsbyImageSharpFluid
             }
           }
         }
         mobile1: file(relativePath: { eq: "sushi1.jpg" }) {
           childImageSharp {
-            fluid(quality: 70, maxWidth: 320) {
+            fluid(quality: 100, maxWidth: 320) {
               ...GatsbyImageSharpFluid
             }
           }
         }
         desktop2: file(relativePath: { eq: "sushi2.jpg" }) {
           childImageSharp {
-            fluid(quality: 70, maxHeight: 300) {
+            fluid(quality: 100, maxHeight: 300) {
               ...GatsbyImageSharpFluid
             }
           }
         }
         mobile2: file(relativePath: { eq: "sushi2.jpg" }) {
           childImageSharp {
-            fluid(quality: 70, maxWidth: 320) {
+            fluid(quality: 100, maxWidth: 320) {
               ...GatsbyImageSharpFluid
             }
           }
         }
         desktop3: file(relativePath: { eq: "sushi3.jpg" }) {
           childImageSharp {
-            fluid(quality: 70, maxHeight: 300) {
+            fluid(quality: 100, maxHeight: 300) {
               ...GatsbyImageSharpFluid
             }
           }
         }
         mobile3: file(relativePath: { eq: "sushi3.jpg" }) {
           childImageSharp {
-            fluid(quality: 70, maxWidth: 320) {
+            fluid(quality: 100, maxWidth: 320) {
               ...GatsbyImageSharpFluid
             }
           }
         }
       }
     `
-  )
+  );
 
   return (
     <Grid container alignItems="center" justify="center" spacing={2}>
@@ -134,5 +134,5 @@ export default function SushiCollage() {
         </Hidden>
       </Grid>
     </Grid>
-  )
+  );
 }

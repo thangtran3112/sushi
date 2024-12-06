@@ -86,28 +86,28 @@ const IndexPage = ({ location }) => {
         }
         desktopDineInHero: file(relativePath: { eq: "sushi-cover4.jpg" }) {
           childImageSharp {
-            fluid(quality: 70, maxHeight: 300) {
+            fluid(quality: 100, maxHeight: 600) {
               ...GatsbyImageSharpFluid
             }
           }
         }
         mobileDineInHero: file(relativePath: { eq: "sushi-cover4.jpg" }) {
           childImageSharp {
-            fluid(quality: 70, maxWidth: 320) {
+            fluid(quality: 100, maxWidth: 640) {
               ...GatsbyImageSharpFluid
             }
           }
         }
         desktopTakeoutHero: file(relativePath: { eq: "Nigiri-editted.jpg" }) {
           childImageSharp {
-            fluid(quality: 70, maxHeight: 300) {
+            fluid(quality: 100, maxHeight: 600) {
               ...GatsbyImageSharpFluid
             }
           }
         }
         mobileTakeoutHero: file(relativePath: { eq: "Nigiri-editted.jpg" }) {
           childImageSharp {
-            fluid(quality: 70, maxWidth: 320) {
+            fluid(quality: 100, maxWidth: 640) {
               ...GatsbyImageSharpFluid
             }
           }

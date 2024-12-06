@@ -37,7 +37,17 @@ module.exports = {
       },
     },
     `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-plugin-sharp`,
+      options: {
+        defaults: {
+          formats: [`auto`],
+          placeholder: `none`,
+          quality: 100,
+        },
+        failOnError: false,
+      },
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -54,4 +64,4 @@ module.exports = {
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
   ],
-}
+};
