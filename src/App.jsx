@@ -1,21 +1,21 @@
-import React, { useState, useEffect } from "react"
+import React, { useState, useEffect } from "react";
 import {
   makeStyles,
   CssBaseline,
   ThemeProvider,
   Collapse,
-} from "@material-ui/core"
-import Alert from "@material-ui/lab/Alert"
-import defaultTheme from "./theme"
-import Navigation from "./components/Navigation"
-import Link from "./components/Link"
-import LocationContext from "./LocationContext"
-import NavigationContext from "./NavigationContext"
-import { useLocalStorageValue } from "./hooks/useLocalStorageState"
+} from "@material-ui/core";
+import Alert from "@material-ui/lab/Alert";
+import defaultTheme from "./theme";
+import Navigation from "./components/Navigation";
+import Link from "./components/Link";
+import LocationContext from "./LocationContext";
+import NavigationContext from "./NavigationContext";
+import { useLocalStorageValue } from "./hooks/useLocalStorageState";
 
 const FEATURE_FLAGS = {
   SHOW_BANNER: false,
-}
+};
 
 const useStyles = makeStyles((theme) => ({
   alert: {
@@ -23,27 +23,28 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "inherit",
   },
   viewLink: { marginRight: theme.spacing(0.5) },
-}))
+}));
 
 const App = ({ location, children }) => {
-  const path = location?.pathname || "/"
-  const classes = useStyles()
+  const path = location?.pathname || "/";
+  const classes = useStyles();
   const { value: showBanner, setValue } = useLocalStorageValue(
     "SHOW_BANNER",
     FEATURE_FLAGS.SHOW_BANNER ? "true" : "false"
-  )
-  const [top, setTop] = useState(40)
-  const open = showBanner === "true"
+  );
+  const [top, setTop] = useState(40);
+  const open = showBanner === "true";
   useEffect(() => {
-    if (open) setTop(48 * 2)
-    else setTop(48)
-  }, [open])
+    if (open) setTop(48 * 2);
+    else setTop(48);
+  }, [open]);
 
   useEffect(() => {
-    if (path === "/info" && showBanner === "true") {
+    setValue(false);
+    /*if (path === "/info" && showBanner === "true") {
       setValue(false)
-    }
-  }, [path, setValue, showBanner])
+    }*/
+  }, [path, setValue, showBanner]);
 
   return (
     <NavigationContext.Provider value={top}>
@@ -75,7 +76,7 @@ const App = ({ location, children }) => {
         </ThemeProvider>
       </LocationContext.Provider>
     </NavigationContext.Provider>
-  )
-}
+  );
+};
 
-export default App
+export default App;
