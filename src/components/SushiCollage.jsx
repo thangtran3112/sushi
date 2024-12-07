@@ -28,7 +28,7 @@ export default function SushiCollage() {
         }
         mobile1: file(relativePath: { eq: "sushi1.jpg" }) {
           childImageSharp {
-            fluid(quality: 100, maxWidth: 320) {
+            fluid(quality: 100, maxWidth: 400) {
               ...GatsbyImageSharpFluid
             }
           }
@@ -42,7 +42,7 @@ export default function SushiCollage() {
         }
         mobile2: file(relativePath: { eq: "sushi2.jpg" }) {
           childImageSharp {
-            fluid(quality: 100, maxWidth: 320) {
+            fluid(quality: 100, maxWidth: 400) {
               ...GatsbyImageSharpFluid
             }
           }
@@ -56,7 +56,7 @@ export default function SushiCollage() {
         }
         mobile3: file(relativePath: { eq: "sushi3.jpg" }) {
           childImageSharp {
-            fluid(quality: 100, maxWidth: 320) {
+            fluid(quality: 100, maxWidth: 400) {
               ...GatsbyImageSharpFluid
             }
           }

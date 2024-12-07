@@ -79,7 +79,7 @@ const IndexPage = ({ location }) => {
         }
         mobileMenuHero: file(relativePath: { eq: "Sushi_Boat_2.jpg" }) {
           childImageSharp {
-            fluid(quality: 80, maxWidth: 420) {
+            fluid(quality: 80, maxWidth: 540) {
               ...GatsbyImageSharpFluid
             }
           }
@@ -93,7 +93,7 @@ const IndexPage = ({ location }) => {
         }
         mobileDineInHero: file(relativePath: { eq: "sushi-cover4.jpg" }) {
           childImageSharp {
-            fluid(quality: 100, maxWidth: 640) {
+            fluid(quality: 100, maxWidth: 400) {
               ...GatsbyImageSharpFluid
             }
           }
@@ -107,7 +107,7 @@ const IndexPage = ({ location }) => {
         }
         mobileTakeoutHero: file(relativePath: { eq: "Nigiri-editted.jpg" }) {
           childImageSharp {
-            fluid(quality: 100, maxWidth: 640) {
+            fluid(quality: 100, maxWidth: 400) {
               ...GatsbyImageSharpFluid
             }
           }
