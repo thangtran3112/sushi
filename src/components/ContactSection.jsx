@@ -1,11 +1,12 @@
-import React from "react"
-import PhoneNumber from "./PhoneNumber"
-import IconText from "./IconText"
-import { Link } from "@material-ui/core"
-import LocationIcon from "@material-ui/icons/LocationOn"
-import PhoneIcon from "@material-ui/icons/Phone"
-import SMSIcon from "@material-ui/icons/Sms"
-import EmailIcon from "@material-ui/icons/Email"
+import React from "react";
+import PhoneNumber from "./PhoneNumber";
+import IconText from "./IconText";
+import { Link } from "@material-ui/core";
+import LocationIcon from "@material-ui/icons/LocationOn";
+import PhoneIcon from "@material-ui/icons/Phone";
+import SMSIcon from "@material-ui/icons/Sms";
+import EmailIcon from "@material-ui/icons/Email";
+import { textNumber } from "./ContactCard";
 
 export default function ContactSection() {
   return (
@@ -29,14 +30,14 @@ export default function ContactSection() {
           </PhoneNumber>
         }
       />
-      {/*<IconText
+      {/* <IconText
         Icon={SMSIcon}
         text={
-          <PhoneNumber number="587-429-4268" color="inherit">
-            (587) 429-4268
+          <PhoneNumber number={textNumber} color="inherit">
+            {textNumber}
           </PhoneNumber>
         }
-      />*/}
+      /> */}
       <IconText
         Icon={EmailIcon}
         text={
@@ -46,5 +47,5 @@ export default function ContactSection() {
         }
       />
     </div>
-  )
+  );
 }

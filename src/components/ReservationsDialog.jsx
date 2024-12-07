@@ -1,5 +1,5 @@
-import React from "react"
-import SmartDialog from "./SmartComponents/SmartDialog"
+import React from "react";
+import SmartDialog from "./SmartComponents/SmartDialog";
 import {
   makeStyles,
   DialogTitle,
@@ -9,12 +9,13 @@ import {
   Typography,
   DialogActions,
   Button,
-} from "@material-ui/core"
-import CloseIcon from "@material-ui/icons/Close"
-import ContactSection from "./ContactSection"
-import WeeklySchedule from "./WeeklySchedule"
-import PhoneNumber from "./PhoneNumber"
-import PhoneIcon from "@material-ui/icons/Phone"
+} from "@material-ui/core";
+import CloseIcon from "@material-ui/icons/Close";
+import ContactSection from "./ContactSection";
+import WeeklySchedule from "./WeeklySchedule";
+import PhoneNumber from "./PhoneNumber";
+import PhoneIcon from "@material-ui/icons/Phone";
+import { textNumber } from "./ContactCard";
 
 const useStyles = makeStyles((theme) => ({
   toolbar: {
@@ -23,10 +24,10 @@ const useStyles = makeStyles((theme) => ({
   spacing: {
     margin: theme.spacing(2, 0),
   },
-}))
+}));
 
 export default function ReservationsDialog({ open, onClose }) {
-  const classes = useStyles()
+  const classes = useStyles();
 
   return (
     <SmartDialog open={open} onClose={onClose}>
@@ -65,11 +66,11 @@ export default function ReservationsDialog({ open, onClose }) {
           size="large"
           variant="outlined"
         >
-          <PhoneNumber number="587-429-4268" color="inherit">
-            Text 587-429-4268
+          <PhoneNumber number={textNumber} color="inherit">
+            Text {textNumber}
           </PhoneNumber>
         </Button>
       </DialogActions>
     </SmartDialog>
-  )
+  );
 }

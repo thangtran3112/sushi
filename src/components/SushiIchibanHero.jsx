@@ -84,7 +84,7 @@ const SushiIchibanHero = () => {
             className={clsx(classes.spacing, classes.smartGrid)}
             container
             alignItems="center"
-            justify="center"
+            justifyContent="center"
             spacing={2}
           >
             <Grid item>

@@ -1,7 +1,7 @@
-import { createMuiTheme } from "@material-ui/core/styles"
-import primary from "@material-ui/core/colors/amber"
+import { createTheme } from "@material-ui/core/styles";
+import primary from "@material-ui/core/colors/amber";
 
-const theme = createMuiTheme({
+const theme = createTheme({
   palette: {
     primary,
     type: "dark",
@@ -13,6 +13,6 @@ const theme = createMuiTheme({
   typography: {
     fontFamily: ['"Open Sans"', "sans-serif"],
   },
-})
+});
 
-export default theme
+export default theme;

@@ -313,15 +313,15 @@ const IndexPage = ({ location }) => {
               />
             </PhoneNumber>
           </Typography>
-          {/*<Typography component="div" variant="h6" align="center">
-            <PhoneNumber number="587-429-4268" color="inherit">
+          {/* <Typography component="div" variant="h6" align="center">
+            <PhoneNumber number={textNumber} color="inherit">
               <IconText
                 disableTypography
                 Icon={SMSIcon}
-                text="Text (587) 429-4268"
+                text={`Text ${textNumber}`}
               />
             </PhoneNumber>
-          </Typography>*/}
+          </Typography> */}
         </Centered>
       </div>
       <div className={clsx(classes.section, classes.container)}>
@@ -352,17 +352,15 @@ const IndexPage = ({ location }) => {
                 }
               />
             </Grid>
-            {/*<Grid item>
+            {/* <Grid item>
               <IconText
                 component="span"
                 Icon={SMSIcon}
                 text={
-                  <PhoneNumber number="587-429-4268">
-                    (587) 429-4268
-                  </PhoneNumber>
+                  <PhoneNumber number={textNumber}>{textNumber}</PhoneNumber>
                 }
               />
-            </Grid>*/}
+            </Grid> */}
             <Grid item>
               <IconText
                 Icon={EmailIcon}
