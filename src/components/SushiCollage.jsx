@@ -21,42 +21,42 @@ export default function SushiCollage() {
       query {
         desktop1: file(relativePath: { eq: "sushi1.jpg" }) {
           childImageSharp {
-            fluid(quality: 70, maxHeight: 300) {
+            fluid(quality: 100, maxHeight: 300) {
               ...GatsbyImageSharpFluid
             }
           }
         }
         mobile1: file(relativePath: { eq: "sushi1.jpg" }) {
           childImageSharp {
-            fluid(quality: 70, maxWidth: 320) {
+            fluid(quality: 100, maxWidth: 400) {
               ...GatsbyImageSharpFluid
             }
           }
         }
         desktop2: file(relativePath: { eq: "sushi2.jpg" }) {
           childImageSharp {
-            fluid(quality: 70, maxHeight: 300) {
+            fluid(quality: 100, maxHeight: 300) {
               ...GatsbyImageSharpFluid
             }
           }
         }
         mobile2: file(relativePath: { eq: "sushi2.jpg" }) {
           childImageSharp {
-            fluid(quality: 70, maxWidth: 320) {
+            fluid(quality: 100, maxWidth: 400) {
               ...GatsbyImageSharpFluid
             }
           }
         }
         desktop3: file(relativePath: { eq: "sushi3.jpg" }) {
           childImageSharp {
-            fluid(quality: 70, maxHeight: 300) {
+            fluid(quality: 100, maxHeight: 300) {
               ...GatsbyImageSharpFluid
             }
           }
         }
         mobile3: file(relativePath: { eq: "sushi3.jpg" }) {
           childImageSharp {
-            fluid(quality: 70, maxWidth: 320) {
+            fluid(quality: 100, maxWidth: 400) {
               ...GatsbyImageSharpFluid
             }
           }
