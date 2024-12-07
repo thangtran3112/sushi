@@ -79,35 +79,35 @@ const IndexPage = ({ location }) => {
         }
         mobileMenuHero: file(relativePath: { eq: "Sushi_Boat_2.jpg" }) {
           childImageSharp {
-            fluid(quality: 80, maxWidth: 540) {
+            fluid(quality: 80, maxWidth: 420) {
               ...GatsbyImageSharpFluid
             }
           }
         }
         desktopDineInHero: file(relativePath: { eq: "sushi-cover4.jpg" }) {
           childImageSharp {
-            fluid(quality: 100, maxHeight: 600) {
+            fluid(quality: 70, maxHeight: 300) {
               ...GatsbyImageSharpFluid
             }
           }
         }
         mobileDineInHero: file(relativePath: { eq: "sushi-cover4.jpg" }) {
           childImageSharp {
-            fluid(quality: 100, maxWidth: 400) {
+            fluid(quality: 70, maxWidth: 320) {
               ...GatsbyImageSharpFluid
             }
           }
         }
         desktopTakeoutHero: file(relativePath: { eq: "Nigiri-editted.jpg" }) {
           childImageSharp {
-            fluid(quality: 100, maxHeight: 600) {
+            fluid(quality: 70, maxHeight: 300) {
               ...GatsbyImageSharpFluid
             }
           }
         }
         mobileTakeoutHero: file(relativePath: { eq: "Nigiri-editted.jpg" }) {
           childImageSharp {
-            fluid(quality: 100, maxWidth: 400) {
+            fluid(quality: 70, maxWidth: 320) {
               ...GatsbyImageSharpFluid
             }
           }
