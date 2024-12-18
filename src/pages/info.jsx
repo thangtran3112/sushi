@@ -149,9 +149,6 @@ function AYCE() {
       <Typography variant="subtitle1" gutterBottom>
         <i>* Prices are subjected to change without notice.</i>
       </Typography>
-      <Typography variant="subtitle1" gutterBottom>
-        <i>* Call in for exact prices or for any inquiries.</i>
-      </Typography>
     </>
   );
 }
