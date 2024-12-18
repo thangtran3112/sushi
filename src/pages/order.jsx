@@ -149,7 +149,7 @@ export default function Info({ location }) {
         ></BackgroundImage>
         <div className={classes.section}>
           <Typography variant="h3" gutterBottom>
-            Order Online with DoorDash
+            Order Online
           </Typography>
           <Typography variant="subtitle1" gutterBottom>
             Prices on DoorDash and SkipTheDish are subjected to their policies
