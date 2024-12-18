@@ -5,7 +5,7 @@ import PhoneIcon from "@material-ui/icons/Phone";
 import HoursIcon from "@material-ui/icons/AccessTime";
 import IconText from "./IconText";
 
-export const textNumber = "(403)-966-2588";
+// export const textNumber = "(403)-966-2588";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -29,7 +29,6 @@ const ContactCard = () => {
           text="4014 Macleod Trail South, Calgary"
         />
         <IconText Icon={HoursIcon} text="11AM - 9:30PM" />
-        <IconText Icon={PhoneIcon} text={textNumber} />
         <IconText Icon={PhoneIcon} text="(403) 243-1000" />
       </CardContent>
     </Card>

@@ -15,7 +15,6 @@ import ContactSection from "./ContactSection";
 import WeeklySchedule from "./WeeklySchedule";
 import PhoneNumber from "./PhoneNumber";
 import PhoneIcon from "@material-ui/icons/Phone";
-import { textNumber } from "./ContactCard";
 
 const useStyles = makeStyles((theme) => ({
   toolbar: {
@@ -57,7 +56,7 @@ export default function ReservationsDialog({ open, onClose }) {
           </PhoneNumber>
         </Button>
       </DialogActions>
-      <DialogActions>
+      {/* <DialogActions>
         <Button
           className={classes.spacing}
           endIcon={<PhoneIcon />}
@@ -70,7 +69,7 @@ export default function ReservationsDialog({ open, onClose }) {
             Text {textNumber}
           </PhoneNumber>
         </Button>
-      </DialogActions>
+      </DialogActions> */}
     </SmartDialog>
   );
 }

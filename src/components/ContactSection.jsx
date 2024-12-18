@@ -4,9 +4,7 @@ import IconText from "./IconText";
 import { Link } from "@material-ui/core";
 import LocationIcon from "@material-ui/icons/LocationOn";
 import PhoneIcon from "@material-ui/icons/Phone";
-import SMSIcon from "@material-ui/icons/Sms";
 import EmailIcon from "@material-ui/icons/Email";
-import { textNumber } from "./ContactCard";
 
 export default function ContactSection() {
   return (

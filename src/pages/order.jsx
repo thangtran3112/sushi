@@ -1,10 +1,10 @@
-import React from "react"
-import { graphql, useStaticQuery } from "gatsby"
-import BackgroundImage from "gatsby-background-image"
-import { Fab, Hidden, Link, makeStyles, Typography } from "@material-ui/core"
-import Page from "../components/Page"
-import clsx from "clsx"
-import Centered from "../components/Layouts/Centered"
+import React from "react";
+import { graphql, useStaticQuery } from "gatsby";
+import BackgroundImage from "gatsby-background-image";
+import { Fab, Hidden, Link, makeStyles, Typography } from "@material-ui/core";
+import Page from "../components/Page";
+import clsx from "clsx";
+import Centered from "../components/Layouts/Centered";
 
 const useStyles = makeStyles((theme) => ({
   backgroundImage: {
@@ -18,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(2),
   },
   caption: {
-    maxWidth: "320px",
+    maxWidth: "500px",
     minWidth: "320px",
   },
   fab: {
@@ -53,10 +53,10 @@ const useStyles = makeStyles((theme) => ({
   center: {
     maxWidth: "400px",
   },
-}))
+}));
 
 export default function Info({ location }) {
-  const classes = useStyles()
+  const classes = useStyles();
 
   const data = useStaticQuery(
     graphql`
@@ -77,10 +77,10 @@ export default function Info({ location }) {
         }
       }
     `
-  )
+  );
 
-  const imageData = data.desktop.childImageSharp.fluid
-  const mobileImageData = data.mobile.childImageSharp.fluid
+  const imageData = data.desktop.childImageSharp.fluid;
+  const mobileImageData = data.mobile.childImageSharp.fluid;
 
   return (
     <Page title="Sushi Ichiban - Order Online" location={location}>
@@ -100,18 +100,20 @@ export default function Info({ location }) {
                   component="h1"
                   gutterBottom
                 >
-                  Pick-up or Delivery
+                  Online Ordering
                 </Typography>
                 <Typography
                   className={clsx(classes.caption)}
                   variant="subtitle1"
                   gutterBottom
                 >
-                  We partner with DoorDash to offer online order or delivery.
-                  Prices on DoorDash are subjected to DoorDash policies and may
-                  be different from this website menu.
+                  Prices on DoorDash and SkipTheDish are subjected to their
+                  policies and may be different from this website menu.
                 </Typography>
-                <div className={classes.section}>
+                <div
+                  className={classes.section}
+                  style={{ display: "flex", flexDirection: "row", gap: "20px" }}
+                >
                   <Fab
                     variant="extended"
                     color="primary"
@@ -120,7 +122,17 @@ export default function Info({ location }) {
                     target="_blank"
                     href="https://order.online/store/sushi-ichiban-99743"
                   >
-                    Order Online Here
+                    Order Doordash
+                  </Fab>
+                  <Fab
+                    variant="extended"
+                    color="primary"
+                    className={classes.darktText}
+                    component={Link}
+                    target="_blank"
+                    href="https://www.skipthedishes.com/sushi-ichiban"
+                  >
+                    Order Skip
                   </Fab>
                 </div>
               </div>
@@ -140,9 +152,8 @@ export default function Info({ location }) {
             Order Online with DoorDash
           </Typography>
           <Typography variant="subtitle1" gutterBottom>
-            We partner with DoorDash to offer online order or delivery. Prices
-            on DoorDash are subjected to DoorDash policies and may be different
-            from this website menu.
+            Prices on DoorDash and SkipTheDish are subjected to their policies
+            and may be different from this website menu.
           </Typography>
           <Fab
             variant="extended"
@@ -153,11 +164,24 @@ export default function Info({ location }) {
               color="inherit"
               href="https://order.online/store/sushi-ichiban-99743"
             >
-              Order Online Here
+              Order Doordash
+            </Link>
+          </Fab>
+
+          <Fab
+            variant="extended"
+            color="primary"
+            className={classes.orderButtonMobile}
+          >
+            <Link
+              color="inherit"
+              href="https://order.online/store/sushi-ichiban-99743"
+            >
+              Order Skip
             </Link>
           </Fab>
         </div>
       </Hidden>
     </Page>
-  )
+  );
 }

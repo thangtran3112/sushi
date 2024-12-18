@@ -1,20 +1,20 @@
-import React from "react"
-import clsx from "clsx"
-import { makeStyles, Grid, Typography } from "@material-ui/core"
+import React from "react";
+import clsx from "clsx";
+import { makeStyles, Grid, Typography } from "@material-ui/core";
 
 function makeSchedule(day, hours) {
-  return { day, hours }
+  return { day, hours };
 }
 
 const defaultSchedule = [
-  makeSchedule("Monday (evening only)", "4:00pm — 9:30pm"),
+  makeSchedule("Monday (closed)", "Except for holidays"),
   makeSchedule("Tuesday", "11:00am — 9:30pm"),
   makeSchedule("Wednesday", "11:00am — 9:30pm"),
   makeSchedule("Thursday", "11:00am — 9:30pm"),
   makeSchedule("Friday", "11:00am — 10:00pm"),
   makeSchedule("Saturday", "11:00am — 10:00pm"),
   makeSchedule("Sunday", "11:00am — 9:30pm"),
-]
+];
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -23,13 +23,13 @@ const useStyles = makeStyles((theme) => ({
   fiddy: {
     flexBasis: "50%",
   },
-}))
+}));
 
 export default function WeeklySchedule({
   className,
   dailySchedule = defaultSchedule,
 }) {
-  const classes = useStyles()
+  const classes = useStyles();
 
   return (
     <Grid
@@ -48,5 +48,5 @@ export default function WeeklySchedule({
         </React.Fragment>
       ))}
     </Grid>
-  )
+  );
 }

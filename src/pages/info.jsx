@@ -1,6 +1,6 @@
-import React from "react"
-import { graphql, useStaticQuery } from "gatsby"
-import BackgroundImage from "gatsby-background-image"
+import React from "react";
+import { graphql, useStaticQuery } from "gatsby";
+import BackgroundImage from "gatsby-background-image";
 import {
   Hidden,
   Link,
@@ -10,12 +10,12 @@ import {
   ListItemText,
   makeStyles,
   Typography,
-} from "@material-ui/core"
-import Page from "../components/Page"
-import Centered from "../components/Layouts/Centered"
-import Overlay from "../components/Overlay"
-import ContactSection from "../components/ContactSection"
-import clsx from "clsx"
+} from "@material-ui/core";
+import Page from "../components/Page";
+import Centered from "../components/Layouts/Centered";
+import Overlay from "../components/Overlay";
+import ContactSection from "../components/ContactSection";
+import clsx from "clsx";
 
 const useStyles = makeStyles((theme) => ({
   backgroundImage: {
@@ -26,7 +26,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundSize: "cover",
   },
   overlay: {
-    maxWidth: "420px",
+    maxWidth: "600px",
     minWidth: "320px",
     margin: theme.spacing(2),
   },
@@ -55,7 +55,7 @@ const useStyles = makeStyles((theme) => ({
   contact: {
     paddingBottom: theme.spacing(6),
   },
-}))
+}));
 
 function ServiceInfo() {
   return (
@@ -64,65 +64,100 @@ function ServiceInfo() {
         <b>Important Information</b>
       </Typography>
       <Typography variant="subtitle1" gutterBottom>
-        We are happy to resume our dine-in services. Reservations are recommended.
-      </Typography>
-      <Typography variant="subtitle1" gutterBottom>
-        To order online please use{" "}
-        <Link href="https://order.online/store/sushi-ichiban-99743">
-          DoorDash
-        </Link>
-        .
+        We are happy to provide both dine-in and take-out services. Reservations
+        are recommended for big groups.
       </Typography>
     </>
-  )
+  );
 }
 
 function AYCE() {
   return (
     <>
       <Typography variant="h6">
-        <b>All-you-can-eat pricing:</b>
+        <b>Adult all-you-can-eat pricing:</b>
       </Typography>
       <List dense>
         <ListItem disableGutters dense>
-          <ListItemText primary="Lunch (before 3pm)" secondary="Monday - Thursday" />
-          <ListItemSecondaryAction>$24.99 / person</ListItemSecondaryAction>
+          <ListItemText
+            primary="Lunch (before 3pm)"
+            secondary="Tuesday - Thursday"
+          />
+          <ListItemSecondaryAction>$27.95 / person</ListItemSecondaryAction>
         </ListItem>
         <ListItem disableGutters dense>
           <ListItemText
             primary="Lunch (before 3pm)"
             secondary="Friday - Sunday, Holidays"
           />
-          <ListItemSecondaryAction>$25.99 / person</ListItemSecondaryAction>
-        </ListItem>
-        <ListItem disableGutters dense>
-          <ListItemText primary="Dinner (all-day)" secondary="Monday - Thursday" />
-          <ListItemSecondaryAction>$34.99 / person</ListItemSecondaryAction>
+          <ListItemSecondaryAction>$28.95 / person</ListItemSecondaryAction>
         </ListItem>
         <ListItem disableGutters dense>
           <ListItemText
-            primary="Dinner (all-day)"
+            primary="Dinner Menu (11:00am to 9:30pm)"
+            secondary="Monday - Thursday"
+          />
+          <ListItemSecondaryAction>$37.95 / person</ListItemSecondaryAction>
+        </ListItem>
+        <ListItem disableGutters dense>
+          <ListItemText
+            primary="Dinner Menu (11:00am to 9:30pm)"
             secondary="Friday - Sunday, Holidays"
           />
-          <ListItemSecondaryAction>$35.99 / person</ListItemSecondaryAction>
+          <ListItemSecondaryAction>$38.95 / person</ListItemSecondaryAction>
+        </ListItem>
+      </List>
+
+      <Typography variant="h6">
+        <b>Kid all-you-can-eat pricing:</b>
+      </Typography>
+      <List dense>
+        <ListItem disableGutters dense>
+          <ListItemText primary="3-5 years old" secondary="All days" />
+          <ListItemSecondaryAction>$9.95 / person</ListItemSecondaryAction>
+        </ListItem>
+        <ListItem disableGutters dense>
+          <ListItemText
+            primary="6-10 years-old Lunch (before 3pm)"
+            secondary="Tuesday - Thursday"
+          />
+          <ListItemSecondaryAction>$18.95 / person</ListItemSecondaryAction>
+        </ListItem>
+        <ListItem disableGutters dense>
+          <ListItemText
+            primary="6-10 years-old Lunch (before 3pm)"
+            secondary="Friday - Sunday, Holidays"
+          />
+          <ListItemSecondaryAction>$19.95 / person</ListItemSecondaryAction>
+        </ListItem>
+        <ListItem disableGutters dense>
+          <ListItemText
+            primary="6-10 years-old Dinner (11:00am to 9:30pm)"
+            secondary="Monday - Thursday"
+          />
+          <ListItemSecondaryAction>$23.95 / person</ListItemSecondaryAction>
+        </ListItem>
+        <ListItem disableGutters dense>
+          <ListItemText
+            primary="6-10 years-old Dinner (11:00am to 9:30pm)"
+            secondary="Friday - Sunday, Holidays"
+          />
+          <ListItemSecondaryAction>$24.95 / person</ListItemSecondaryAction>
         </ListItem>
       </List>
 
       <Typography variant="subtitle1" gutterBottom>
-        <i>* Website prices are not updated frequently.</i>
+        <i>* Prices are subjected to change without notice.</i>
       </Typography>
       <Typography variant="subtitle1" gutterBottom>
         <i>* Call in for exact prices or for any inquiries.</i>
       </Typography>
-      <Typography variant="subtitle1" gutterBottom>
-        <i>* Prices are subjected to change without notice.</i>
-      </Typography>
     </>
-  )
+  );
 }
 
 export default function Info({ location }) {
-  const classes = useStyles()
+  const classes = useStyles();
 
   const data = useStaticQuery(
     graphql`
@@ -143,10 +178,10 @@ export default function Info({ location }) {
         }
       }
     `
-  )
+  );
 
-  const imageData = data.desktop.childImageSharp.fluid
-  const mobileImageData = data.mobile.childImageSharp.fluid
+  const imageData = data.desktop.childImageSharp.fluid;
+  const mobileImageData = data.mobile.childImageSharp.fluid;
 
   return (
     <Page title="Sushi Ichiban - Important Information" location={location}>
@@ -194,7 +229,7 @@ export default function Info({ location }) {
         </Hidden>
       </div>
     </Page>
-  )
+  );
 }
 
 function Contact() {
@@ -205,5 +240,5 @@ function Contact() {
       </Typography>
       <ContactSection />
     </div>
-  )
+  );
 }
